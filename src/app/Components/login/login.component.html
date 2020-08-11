@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Login</title>
+	<link rel="stylesheet" href="login.component.css">
+</head>
+<body>
+	<form [formGroup]="loginForm" (ngSubmit)="login()">
+		<div class="container">
+			<div class="title">
+			<p>Login</p>
+		</div>
+		<div class="form">
+	    	<div class="input_field">
+				<label>Username or email address</label>
+				<input type="text" placeholder="email" class="input" formControlName="name">
+			</div>
+			<div class="input_field">
+				<label>Password</label>
+				<input type="password" placeholder="password" class="input" formControlName="password">
+				<a href="../forget-password/forget-password.component.html" class="forgot">Forgot password?</a>
+			</div>
+			<div class="btn">
+				<input type="submit" value="Sign In" class="sign_btn">
+			</div>
+    	</div>
+		</div>	
+	</form>
+</body>
+</html>
