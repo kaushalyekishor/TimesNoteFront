@@ -10,4 +10,8 @@ export class HttpRequestService{
         add(user:any){
             return this._http.post('http://localhost:5050/user/signUp', user);
         }
+
+        verify(user:any){
+            return this._http.post('http://localhost:5050/user/verify', user);
+        }
     }

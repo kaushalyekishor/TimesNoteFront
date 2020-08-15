@@ -1,0 +1,9 @@
+<form [formGroup]="verifyForm" (ngSubmit)="verify()">
+    <div class="container">
+      <hr />
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" id="email"  formControlName="email"/>
+      <hr />
+      <button type="submit" class="registerbtn">Verify</button>
+    </div>
+  </form>

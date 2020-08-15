@@ -6,16 +6,19 @@ import { AppComponent } from './app.component';
 import { RegistrationComponent } from './Components/registration/registration.component';
 import { LoginComponent } from './Components/login/login.component';
 import { ForgetPasswordComponent } from './Components/forget-password/forget-password.component';
+import { UserVerificationComponent } from './Components/user-verification/user-verification.component';
 import {HttpClient, HttpClientModule} from '@angular/common/http'
 import { from } from 'rxjs';
-import { AppRoutingModule} from './app-routing.module'
+import { AppRoutingModule} from './app-routing.module';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistrationComponent,
     LoginComponent,
-    ForgetPasswordComponent
+    ForgetPasswordComponent,
+    UserVerificationComponent
   ],
   imports: [
     BrowserModule,
