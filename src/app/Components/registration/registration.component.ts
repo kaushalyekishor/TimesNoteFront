@@ -19,6 +19,7 @@ export class RegistrationComponent implements OnInit {
       password:['', Validators.required]
     })
 }
+
 get name(){
   return this.registerForm.get('name')
 }

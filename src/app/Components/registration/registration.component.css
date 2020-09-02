@@ -31,6 +31,7 @@ body{
 	border-radius: 5px;
 	padding: 20px;
 }
+
 .container .form .input_field{
    margin-bottom: 15px;
    color:black;
@@ -54,7 +55,7 @@ body{
 	margin-top: 10px;
 	background-color:forestgreen;
 	border: 1px solid rgba(27,31,35,.2);
-	width: 100%;
+	width: 325%;
 	color: black;
 	font-weight: 500;
 	cursor: pointer;

@@ -14,17 +14,35 @@
 		<div class="form">
 	    	<div class="input_field">
 				<label>Username or email address</label>
-				<input type="text" name="name" placeholder="email" class="input" formControlName="name">
+				<input type="text" name="email" placeholder="email" class="input" formControlName="email">
 			</div>
 			<div class="input_field">
 				<label>Password</label>
 				<input type="password" name="password" placeholder="password" class="input" formControlName="password">
-				<a href="../forget-password/forget-password.component.html" class="forgot">Forgot password?</a>
+				<!--<a href="../forget-password/forget-password.component.html" class="forgot">Forgot password?</a>-->
+				<div>
+					<a [routerLink]="'/forgetPassword'">forget password</a>
+				</div>
 			</div>
 			<div class="btn">
 				<input type="submit" value="Sign In" class="sign_btn">
 			</div>
-			<div>
+			<p>------------------------------OR-----------------------------</p>
+			<div align = "center">
+				<button type="button" (click) = "signInWithGoogle()" style="border: none; background: none; padding: none;">
+					<img src="../../../assets/Google.png" style="width: 270px; height: 40px;">
+				</button>
+				<p>------------------------------OR-----------------------------</p>
+				<button type="button" (click) = "signInWithGoogle()" style="border: none; background: none; padding: none;">
+					<img src="../../../assets/Facebook.png" style="width: 270px; height: 40px;">
+				</button>
+				<p>------------------------------OR-----------------------------</p>
+				<button type="button" (click) = "signInWithGoogle()" style="border: none; background: none; padding: none;">
+					<img src="../../../assets/Twitter.png" style="width: 275px; height: 40px;">
+				</button>			
+			</div>
+			<p>------------------------------OR-----------------------------</p>
+			<div align="center">
 				<a [routerLink]="'/register'">Click here for Registration</a>
 			</div>
     	</div>

@@ -14,4 +14,16 @@ export class HttpRequestService{
         verify(user:any){
             return this._http.post('http://localhost:5050/user/verify', user);
         }
-    }
+
+        login(user:any){
+            return this._http.post('http://localhost:5050/user/login', user); 
+          }
+
+        forgetPassword(user:any){
+            return this._http.post('http://localhost:5050/user/forgetPassword', user); 
+          }  
+
+        updatePassword(user:any){
+            return this._http.post('http://localhost:5050/user/updatePassword', user); 
+          }    
+    } 

@@ -10,7 +10,16 @@ import { UserVerificationComponent } from './Components/user-verification/user-v
 import {HttpClient, HttpClientModule} from '@angular/common/http'
 import { from } from 'rxjs';
 import { AppRoutingModule} from './app-routing.module';
-
+import { DashboardComponent } from './Components/dashboard/dashboard.component';
+import { UpdatePasswordComponent } from './Components/update-password/update-password.component';
+import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
+import { GoogleLoginProvider } from 'angularx-social-login';
+import { NavbarComponent } from './Components/navbar/navbar.component';
+import { SidenavbarComponent } from './Components/sidenavbar/sidenavbar.component';
+import { SideNavTogglerComponent } from './Components/side-nav-toggler/side-nav-toggler.component';
+import { NotesComponent } from './Components/notes/notes.component';
+import { CreateNoteComponent } from './Components/create-note/create-note.component';
+import { DisplayNoteComponent } from './Components/display-note/display-note.component';
 
 @NgModule({
   declarations: [
@@ -18,16 +27,41 @@ import { AppRoutingModule} from './app-routing.module';
     RegistrationComponent,
     LoginComponent,
     ForgetPasswordComponent,
-    UserVerificationComponent
+    UserVerificationComponent,
+    DashboardComponent,
+    ForgetPasswordComponent,
+    UpdatePasswordComponent,
+    NavbarComponent,
+    SidenavbarComponent,
+    SideNavTogglerComponent,
+    NotesComponent,
+    CreateNoteComponent,
+    DisplayNoteComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    SocialLoginModule
   ],
-  providers: [HttpClient],
+  providers: [HttpClient,
+    {
+      provide: 'SocialAuthServiceConfig',
+      useValue: {
+        autoLogin: false,
+        providers: [
+          {
+            id: GoogleLoginProvider.PROVIDER_ID,
+            provider: new GoogleLoginProvider(
+              "912399049440-8tl0avhb5e05v1db9vkt1g4vp6k9i20a.apps.googleusercontent.com"
+            ),
+          },
+          ],
+        } as SocialAuthServiceConfig,
+      }],
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
