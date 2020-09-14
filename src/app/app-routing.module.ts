@@ -16,7 +16,6 @@ const routes: Routes = [
     {path:'dashboard',component: DashboardComponent},
     {path:'forgetPassword',component: ForgetPasswordComponent},
     {path:'updatePassword/:token',component: UpdatePasswordComponent},
-    { path: 'register', component: RegistrationComponent },
     { path: 'confirmation/:id', component: UserVerificationComponent },
     { path: 'dashboard', component: DashboardComponent, 
     children:[

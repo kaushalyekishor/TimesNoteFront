@@ -13,7 +13,7 @@ import { AppRoutingModule} from './app-routing.module';
 import { DashboardComponent } from './Components/dashboard/dashboard.component';
 import { UpdatePasswordComponent } from './Components/update-password/update-password.component';
 import { SocialLoginModule, SocialAuthServiceConfig } from 'angularx-social-login';
-import { GoogleLoginProvider } from 'angularx-social-login';
+import { GoogleLoginProvider,FacebookLoginProvider} from 'angularx-social-login';
 import { NavbarComponent } from './Components/navbar/navbar.component';
 import { SidenavbarComponent } from './Components/sidenavbar/sidenavbar.component';
 import { SideNavTogglerComponent } from './Components/side-nav-toggler/side-nav-toggler.component';
@@ -58,6 +58,15 @@ import { DisplayNoteComponent } from './Components/display-note/display-note.com
               "912399049440-8tl0avhb5e05v1db9vkt1g4vp6k9i20a.apps.googleusercontent.com"
             ),
           },
+          {
+            id: FacebookLoginProvider.PROVIDER_ID,
+            provider: new FacebookLoginProvider('599051860729374'),
+          },
+          /*
+          {
+            id: LinkdinLoginProvider.PROVIDER_ID,
+            provider: new LinkdinLoginProvider('599051860729374'),
+          },*/
           ],
         } as SocialAuthServiceConfig,
       }],

@@ -10,7 +10,9 @@ export class DashboardComponent implements OnInit {
   constructor() { 
     let token = localStorage.getItem('loginToken')
     let decodedUserDetails = jwt_decode(token)
-    console.log(decodedUserDetails);
+    let stoken = localStorage.getItem('sociallogin');
+    let sUser = jwt_decode(stoken) 
+    console.log(sUser);
     
   }
 

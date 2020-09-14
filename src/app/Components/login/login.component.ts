@@ -23,10 +23,13 @@ export class LoginComponent implements OnInit {
   signInWithGoogle(): void {
     this.authService.signIn(GoogleLoginProvider.PROVIDER_ID);
   }
-  signInWithFacebook(): void {
+  signInWithFB(): void {
     this.authService.signIn(FacebookLoginProvider.PROVIDER_ID);
   }
- 
+
+ /* signInWithLinkdin(): void {
+    this.authService.signIn(LinkdinLoginProvider.PROVIDER_ID);
+  }*/
  
   ngOnInit(): void {
     this.loginForm=this.fb.group({
@@ -38,6 +41,8 @@ export class LoginComponent implements OnInit {
       this.user = user;
       this.loggedIn = (user != null);
       console.log(user); 
+      localStorage.setItem('sociallogin',this.user.idToken);
+      this.router.navigate(['dashboard']);
     });
   }
     get email(){
